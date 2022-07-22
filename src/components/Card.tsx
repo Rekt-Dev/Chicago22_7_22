@@ -1,4 +1,4 @@
-import constructedLink from "./Header";
+import { constructedLink } from "./Header";
 export let Card = () => {
   let goToArtist = () => {
     console.log("go2artist invoked");

@@ -4,7 +4,16 @@ import { Header } from "./components/Header";
 import { useState } from "react";
 
 export default function App() {
-  const [jsonData, setJsonData] = useState([]);
+  const [jsonData, setJsonData] = useState(["bro", "sir", "dad", "mom"]);
+
+  const MockCard = (props) => {
+    return <div>{JSON.stringify(props.item)}</div>;
+  };
+
+  let JsonDisplayer = () => {
+    console.log("json displayer was invoked");
+    return <div>{jsonData}</div>;
+  };
 
   async function getData(searchData: any) {
     console.log("getdATA invoked");
@@ -18,16 +27,13 @@ export default function App() {
   return (
     <div>
       <Header search={getData} />
+      <div>
+        {jsonData
+          ? jsonData.map((singleArtWork, index) => (
+              <MockCard key={index} item={singleArtWork} />
+            ))
+          : "No data to show"}
+      </div>
     </div>
   );
-}
-
-{
-  /* <div className="center">
-{jsonData
-  ? jsonData.map((artWork, index) => (
-      <Card key={index} item={artWork} />
-    ))
-  : "Search the world's most comprehensive index of full-text books."}
-</div> */
 }
