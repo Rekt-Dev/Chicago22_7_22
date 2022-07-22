@@ -1,4 +1,4 @@
-export const Header = () => {
+export let Header = (props) => {
   return (
     <>
       <div>
