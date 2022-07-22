@@ -3,10 +3,6 @@ import { useState } from "react";
 export let Header = (props: any) => {
   const [search, setSearch] = useState("");
 
-  let sendSearchToServer = () => {
-    console.log("send search to server invoked", `with ${search}`);
-  };
-
   return (
     <>
       <div>
