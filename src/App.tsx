@@ -9,7 +9,7 @@ export default function App() {
   async function getData(searchData: any) {
     console.log("getdATA invoked");
     const response = await fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${searchData}`
+      `https://api.artic.edu/api/v1/artworks/search?q=${searchData}`
     );
     setJsonData(await response.json());
     console.log(jsonData);
@@ -18,8 +18,16 @@ export default function App() {
   return (
     <div>
       <Header search={getData} />
-      <div>{jsonData} div</div>
-      <Card />
     </div>
   );
+}
+
+{
+  /* <div className="center">
+{jsonData
+  ? jsonData.map((artWork, index) => (
+      <Card key={index} item={artWork} />
+    ))
+  : "Search the world's most comprehensive index of full-text books."}
+</div> */
 }
