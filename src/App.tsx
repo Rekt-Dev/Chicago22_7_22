@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function App() {
   const [jsonData, setJsonData] = useState([]);
-  const MockCard = (props) => {
+  const MockCard = (props: any) => {
     return <div>{JSON.stringify(props.item)}</div>;
   };
 
