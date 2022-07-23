@@ -5,19 +5,10 @@ import { useState } from "react";
 
 export default function App() {
   const [jsonData, setJsonData] = useState([]);
-  const MockCard = (props: any) => {
-    return <div>{JSON.stringify(props.data ? props.data.item : "nada")}</div>;
-  };
-
-  let JsonDisplayer = () => {
-    console.log("json displayer was invoked");
-    return <div>{jsonData}</div>;
-  };
 
   async function getData(searchData: any) {
     let data1;
     console.log("getdATA invoked");
-    JsonDisplayer();
     const response = await fetch(
       `https://api.artic.edu/api/v1/artworks/search?q=${searchData}&limit=10&fields=id,title,image_id,artist_names,artist_title`
     );
