@@ -4,8 +4,7 @@ import { Header } from "./components/Header";
 import { useState } from "react";
 
 export default function App() {
-  const [jsonData, setJsonData] = useState(["bro", "sir", "dad", "mom"]);
-
+  const [jsonData, setJsonData] = useState([]);
   const MockCard = (props) => {
     return <div>{JSON.stringify(props.item)}</div>;
   };
@@ -29,8 +28,8 @@ export default function App() {
       <Header search={getData} />
       <div>
         {jsonData
-          ? jsonData.map((singleArtWork, index) => (
-              <MockCard key={index} item={singleArtWork} />
+          ? jsonData.map((artWork, index) => (
+              <MockCard key={index} item={artWork} />
             ))
           : "No data to show"}
       </div>
