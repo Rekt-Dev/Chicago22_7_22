@@ -19,18 +19,15 @@ export default function App() {
     console.log("getdATA invoked");
     JsonDisplayer();
     const response = await fetch(
-      `https://api.artic.edu/api/v1/artworks/search?q=${searchData}&limit=10&fields=id,title,image_id,artist_names`
+      `https://api.artic.edu/api/v1/artworks/search?q=${searchData}&limit=10&fields=id,title,image_id,artist_names,artist_title`
     );
     setJsonData(await response.json());
     console.log(jsonData);
     data1 = jsonData;
-    jsonData
-      ? console.log(`this is an asynced jsonData :) ${data1}`)
-      : "theres nothin brew";
   }
 
   return (
-    <div>
+    <div className=".flex">
       <Header search={getData} />
       <div></div>
       <br />

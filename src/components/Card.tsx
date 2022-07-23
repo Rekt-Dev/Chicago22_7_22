@@ -7,15 +7,15 @@ export let Card = (props: any) => {
       "https://www.artic.edu/iiif/2/d68a3f34-411d-efd4-154e-48b9c565b125/full/843,/0/default.jpg";
 
     if (props.data) {
-      return props.data.image_id;
+      return props.item.image_id;
     } else return defaultLink;
   }
   const imageEndLink = "/full/843,/0/default.jpg";
   const imageStartLink = "https://www.artic.edu/iiif/2/";
 
-  const artworkId = props.image_id;
+  const artworkId = props.item.image_id;
   let constructedLink = imageStartLink + artworkId + imageEndLink;
-  console.log(constructedLink);
+  console.log(`this is constructedLink  ${constructedLink}`);
   let goToArtist = () => {
     console.log("go2artist invoked");
   };
@@ -39,16 +39,17 @@ export let Card = (props: any) => {
         <ul>
           {}
           <a href="./GoToArtist">
-            <li onClick={goToArtist}>{props.image_id || "Artist name"}</li>
+            <li onClick={goToArtist}>
+              {props.item.artist_display || "Artist name"}
+            </li>
           </a>{" "}
           <a href="./GoToArtist">
-            <li onClick={goToArtist}>{props.title || "Title Name"}</li>
+            <li onClick={goToArtist}>
+              Title:{props.item.artist_title || "Title Name"}
+            </li>
           </a>
           <a href="./GoToArtist">
-            <li onClick={goToArtist}>{props.image_id || " Country"}</li>
-          </a>
-          <a href="./GoToArtist">
-            <li onClick={goToArtist}>{props.date_display || "Hits"}</li>
+            <li onClick={goToArtist}>{props.item.title || "Hits"}</li>
           </a>
         </ul>
       </div>
