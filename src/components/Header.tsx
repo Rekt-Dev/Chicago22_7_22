@@ -19,7 +19,7 @@ export let Header = (props: any) => {
             props.search(search.trim());
           }}
         >
-          search
+          Search...
         </button>
       </div>
     </>

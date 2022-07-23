@@ -39,16 +39,16 @@ export let Card = (props: any) => {
         <ul>
           {}
           <a href="./GoToArtist">
-            <li onClick={goToArtist}>{props.data || "Artist name"}</li>
+            <li onClick={goToArtist}>{props.image_id || "Artist name"}</li>
           </a>{" "}
           <a href="./GoToArtist">
-            <li onClick={goToArtist}>{props.data || "Title Name"}</li>
+            <li onClick={goToArtist}>{props.title || "Title Name"}</li>
           </a>
           <a href="./GoToArtist">
-            <li onClick={goToArtist}>{props.data || " Country"}</li>
+            <li onClick={goToArtist}>{props.image_id || " Country"}</li>
           </a>
           <a href="./GoToArtist">
-            <li onClick={goToArtist}>{props.data || "Hits"}</li>
+            <li onClick={goToArtist}>{props.date_display || "Hits"}</li>
           </a>
         </ul>
       </div>
