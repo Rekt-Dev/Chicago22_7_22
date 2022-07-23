@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function App() {
   const [jsonData, setJsonData] = useState([]);
   const MockCard = (props: any) => {
-    return <div>{JSON.stringify(props.item)}</div>;
+    return <div>{JSON.stringify(props.data ? props.data.title : "nada")}</div>;
   };
 
   let JsonDisplayer = () => {
@@ -15,12 +15,18 @@ export default function App() {
   };
 
   async function getData(searchData: any) {
+    let data1;
     console.log("getdATA invoked");
+    JsonDisplayer();
     const response = await fetch(
-      `https://api.artic.edu/api/v1/artworks/search?q=${searchData}fields=id,title,image_id`
+      `https://api.artic.edu/api/v1/artworks/search?q=${searchData}&limit=10&fields=id,title,image_id,artist_name`
     );
     setJsonData(await response.json());
-    console.log(jsonData);
+    await console.log(jsonData);
+    data1 = jsonData;
+    jsonData
+      ? console.log(`this is an asynced jsonData :) ${jsonData}`)
+      : "theres nothin brew";
   }
 
   return (
@@ -28,10 +34,11 @@ export default function App() {
       <Header search={getData} />
       <div></div>
       <br />
+      <MockCard />
       <div>
         {jsonData.data
           ? jsonData.data.map((artWork, index) => (
-              <MockCard key={index} item={artWork} />
+              <Card key={index} item={artWork} />
             ))
           : "No data to show"}
       </div>
@@ -40,3 +47,5 @@ export default function App() {
 }
 
 //https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id
+
+//https://api.artic.edu/api/v1/artworks/search?query[term][is_public_domain]=true&limit=2&fields=id,title,image_id

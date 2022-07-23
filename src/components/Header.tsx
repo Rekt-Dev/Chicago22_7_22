@@ -1,14 +1,11 @@
 import { useState } from "react";
 
 export let Header = (props: any) => {
-  const endLink = "/full/843,/0/default.jpg";
-  const startLink = "https://www.artic.edu/iiif/2/";
+  const imageEndLink = "/full/843,/0/default.jpg";
+  const imageStartLink = "https://www.artic.edu/iiif/2/";
   //the artworkid  which is image_id comes from the json weve just used a promise to get
   const artworkId = "fd26fe20-e8fd-d80a-c3e9-c07365b0db61";
-  const constructedLink =
-    "https://api.artic.edu/api/v1/artworks?fields=id,title,artist_display,date_display,main_reference_number ";
-
-  //startLink + artworkId + endLink;
+  const constructedLink = imageStartLink + artworkId + imageEndLink;
   const [search, setSearch] = useState("");
 
   return (
@@ -34,4 +31,4 @@ export let Header = (props: any) => {
   );
 };
 
-// https://api.artic.edu/api/v1/artworks?fields=id,title,artist_display,date_display,main_reference_number
+//

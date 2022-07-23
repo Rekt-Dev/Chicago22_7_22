@@ -24,11 +24,17 @@ export let Card = () => {
         <ul>
           {}
           <a href="./GoToArtist">
-            <li onClick={goToArtist}>{props.artistName || "artist name"}</li>
+            <li onClick={goToArtist}>{props.data || "artist name"}</li>
+          </a>{" "}
+          <a href="./GoToArtist">
+            <li onClick={goToArtist}>{props.data || "artist name"}</li>
           </a>
-          <li onClick={goToArtist}>{props.title}</li>
-          <li>{props.year}</li>
-          <li>{props.town}</li>
+          <a href="./GoToArtist">
+            <li onClick={goToArtist}>{props.data || "artist name"}</li>
+          </a>
+          <a href="./GoToArtist">
+            <li onClick={goToArtist}>{props.data || "artist name"}</li>
+          </a>
         </ul>
       </div>
     </>
