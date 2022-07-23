@@ -6,7 +6,9 @@ import { useState } from "react";
 export default function App() {
   const [jsonData, setJsonData] = useState([]);
   const MockCard = (props: any) => {
-    return <div>{JSON.stringify(props.data ? props.data.item : "nada")}</div>;
+    return (
+      <div>{JSON.stringify(props.data ? props.data.image_id : "nada")}</div>
+    );
   };
 
   let JsonDisplayer = () => {
@@ -25,7 +27,7 @@ export default function App() {
     await console.log(jsonData);
     data1 = jsonData;
     jsonData
-      ? console.log(`this is an asynced jsonData :) ${data1}`)
+      ? console.log(`this is an asynced jsonData :${data1}`)
       : "theres nothin brew";
   }
 
