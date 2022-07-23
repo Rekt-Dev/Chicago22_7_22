@@ -17,7 +17,7 @@ export default function App() {
   async function getData(searchData: any) {
     console.log("getdATA invoked");
     const response = await fetch(
-      `https://api.artic.edu/api/v1/artworks/search?q=${searchData}`
+      `https://api.artic.edu/api/v1/artworks/search?q=${searchData}fields=id,title,image_id`
     );
     setJsonData(await response.json());
     console.log(jsonData);
@@ -26,14 +26,17 @@ export default function App() {
   return (
     <div>
       <Header search={getData} />
+      <div></div>
       <br />
       <div>
         {jsonData.data
           ? jsonData.data.map((artWork, index) => (
-              <Card key={index} item={artWork} />
+              <MockCard key={index} item={artWork} />
             ))
           : "No data to show"}
       </div>
     </div>
   );
 }
+
+//https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id
