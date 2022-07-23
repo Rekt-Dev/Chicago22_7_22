@@ -10,7 +10,7 @@ export default function App() {
     let data1;
     console.log("getdATA invoked");
     const response = await fetch(
-      `https://api.artic.edu/api/v1/artworks/search?q=${searchData}&limit=10&fields=id,title,image_id,artist_names,artist_title`
+      `https://api.artic.edu/api/v1/artworks/search?q=${searchData}&limit=10&fields=id,title,image_id,artist_names,artist_title,place_of_origin`
     );
     setJsonData(await response.json());
     console.log(jsonData);
@@ -18,12 +18,12 @@ export default function App() {
   }
 
   return (
-    <div className=".flex">
-      <Header search={getData} />
-      <div></div>
+    <div className="center">
+      <Header  search={getData} />
+  <div></div>
       <br />
 
-      <div>
+      <div className="center">
         {jsonData.data
           ? jsonData.data.map((artWork, index) => (
               <Card key={index} item={artWork} />

@@ -1,9 +1,200 @@
-.App {
-  font-family: sans-serif;
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.center {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(39, 24, 66);
+  font-weight: 300;
+  background: #e4ebea;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  margin: 20% auto;
+  padding: 80px 0;
   text-align: center;
 }
 
-.flex {
-  display:flex
-  flex:wrap
+.container h1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+input {
+  background-color: rgba(252, 252, 252, 0.2);
+  width: 250px;
+  border-radius: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: rgb(148, 32, 32);
+  font-weight: 300;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(25, 173, 32, 0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(148, 15, 189, 0.2);
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #28342e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+
+  
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(170, 80, 80, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.centered {
+
+  justify-content: center;
+  align-items: center;
+  width:25%;
+  border: 1px solid;
+  border-radius:10px;
+
+}
+
+.divWidths {
+  
+  display: flex;
+  align-items: 
+  flex-direction:row;
+  width:100%;
+  height:80%;
+  flex: 1;
+  top: 60;
+  flexDirection: "row",
+  flexWrap: "wrap",
+  marginBottom: 1
+}
+
+
+.liFont {
+
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+  font-size: 100%;
+  font-weight: x-large;
+  
+}
+
+.container {
+  padding: 2px 16px;
+}
+button {
+  appearance: none;
+  outline: 0;
+  border-radius: 20px;
+
+  background-color: white;
+  border: 0;
+  padding: 10px 1px;
+  color: #50a3a2;
+  border-radius: 8px;
+  width: 12rem;
+  font-size: 18px;
 }

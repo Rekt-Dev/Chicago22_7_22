@@ -1,12 +1,15 @@
 export let Card = (props: any) => {
   function dataOrDefault() {
+    console.log(
+      `bleeeeeeeeeeeeeeeeeeeeeeeeh https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg"`
+    );
     function truncate(str) {
       return str.length > 10 ? str.substring(0, 7) + "..." : str;
     }
     const defaultLink =
       "https://www.artic.edu/iiif/2/d68a3f34-411d-efd4-154e-48b9c565b125/full/843,/0/default.jpg";
 
-    if (props.data) {
+    if (props.item) {
       return props.item.image_id;
     } else return defaultLink;
   }
@@ -27,7 +30,7 @@ export let Card = (props: any) => {
             width="230rem"
             height="230rem"
             alt=" 3 cats"
-            src={dataOrDefault()}
+            src={`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`}
             onMouseOut={() => console.log("out of hover")}
             onMouseOver={() => console.log("into hover")}
           />
@@ -39,17 +42,17 @@ export let Card = (props: any) => {
         <ul>
           {}
           <a href="./GoToArtist">
-            <li onClick={goToArtist}>
-              {props.item.artist_display || "Artist name"}
-            </li>
+            <li onClick={goToArtist}>{props.item.title || "Artist name"}</li>
           </a>{" "}
           <a href="./GoToArtist">
             <li onClick={goToArtist}>
-              Title:{props.item.artist_title || "Title Name"}
+              Artist Title: {props.item.artist_title || "Title Name"}
             </li>
           </a>
           <a href="./GoToArtist">
-            <li onClick={goToArtist}>{props.item.title || "Hits"}</li>
+            <li onClick={goToArtist}>
+              Origin: {props.item.place_of_origin || "origin"}
+            </li>
           </a>
         </ul>
       </div>
