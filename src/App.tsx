@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function App() {
   const [jsonData, setJsonData] = useState([]);
   const MockCard = (props: any) => {
-    return <div>{JSON.stringify(props.data ? props.data.title : "nada")}</div>;
+    return <div>{JSON.stringify(props.data ? props.data.item : "nada")}</div>;
   };
 
   let JsonDisplayer = () => {
@@ -19,13 +19,13 @@ export default function App() {
     console.log("getdATA invoked");
     JsonDisplayer();
     const response = await fetch(
-      `https://api.artic.edu/api/v1/artworks/search?q=${searchData}&limit=10&fields=id,title,image_id,artist_name`
+      `https://api.artic.edu/api/v1/artworks/search?q=${searchData}&limit=10&fields=id,title,image_id,artist_names`
     );
     setJsonData(await response.json());
     await console.log(jsonData);
     data1 = jsonData;
     jsonData
-      ? console.log(`this is an asynced jsonData :) ${jsonData}`)
+      ? console.log(`this is an asynced jsonData :) ${data1}`)
       : "theres nothin brew";
   }
 
@@ -34,7 +34,7 @@ export default function App() {
       <Header search={getData} />
       <div></div>
       <br />
-      <MockCard />
+      <MockCard title="title" data="data" />
       <div>
         {jsonData.data
           ? jsonData.data.map((artWork, index) => (
