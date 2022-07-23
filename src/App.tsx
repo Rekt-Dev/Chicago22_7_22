@@ -28,9 +28,9 @@ export default function App() {
       <Header search={getData} />
       <br />
       <div>
-        {jsonData.items
-          ? jsonData.items.map((artWork, index) => (
-              <MockCard key={index} item={artWork} />
+        {jsonData.data
+          ? jsonData.data.map((artWork, index) => (
+              <Card key={index} item={artWork} />
             ))
           : "No data to show"}
       </div>
