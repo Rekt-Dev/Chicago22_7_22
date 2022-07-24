@@ -1,9 +1,5 @@
 export let Card = (props: any) => {
   function dataOrDefault() {
-    console.log(
-      `bleeeeeeeeeeeeeeeeeeeeeeeeh https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg"`
-    );
-
     const defaultLink =
       "https://www.artic.edu/iiif/2/d68a3f34-411d-efd4-154e-48b9c565b125/full/843,/0/default.jpg";
 
@@ -41,13 +37,12 @@ export let Card = (props: any) => {
           {}
           <a href="./GoToArtist">
             <p onClick={goToArtist}>
-              {props.item.title.truncate || "Artist name"}
-              numberOfLines={1}
+              Title: {props.item.title.truncate || "Artist name"}
             </p>
           </a>{" "}
           <a href="./GoToArtist">
             <p onClick={goToArtist}>
-              Artist Title: {props.item.artist_title || "Title Name"}
+              Artist: {props.item.artist_title || "Title Name"}
             </p>
           </a>
           <a href="./GoToArtist">
