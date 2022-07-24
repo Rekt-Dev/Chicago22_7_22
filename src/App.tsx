@@ -36,4 +36,4 @@ export default function App() {
 
 //https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id
 
-//https://api.artic.edu/api/v1/artworks/search?query[term][is_public_domain]=true&limit=2&fields=id,title,image_id
+//https://api.artic.edu/api/v1/artworks/search?query[term][is_public_domain]=true&limit=2&fields=id,title,image_id,expose_id
