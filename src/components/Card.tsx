@@ -3,9 +3,7 @@ export let Card = (props: any) => {
     console.log(
       `bleeeeeeeeeeeeeeeeeeeeeeeeh https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg"`
     );
-    function truncate(str) {
-      return str.length > 10 ? str.substring(0, 7) + "..." : str;
-    }
+
     const defaultLink =
       "https://www.artic.edu/iiif/2/d68a3f34-411d-efd4-154e-48b9c565b125/full/843,/0/default.jpg";
 
@@ -42,17 +40,20 @@ export let Card = (props: any) => {
         <ul>
           {}
           <a href="./GoToArtist">
-            <li onClick={goToArtist}>{props.item.title || "Artist name"}</li>
+            <p onClick={goToArtist}>
+              {props.item.title.truncate || "Artist name"}
+              numberOfLines={1}
+            </p>
           </a>{" "}
           <a href="./GoToArtist">
-            <li onClick={goToArtist}>
+            <p onClick={goToArtist}>
               Artist Title: {props.item.artist_title || "Title Name"}
-            </li>
+            </p>
           </a>
           <a href="./GoToArtist">
-            <li onClick={goToArtist}>
+            <p onClick={goToArtist}>
               Origin: {props.item.place_of_origin || "origin"}
-            </li>
+            </p>
           </a>
         </ul>
       </div>

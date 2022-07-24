@@ -7,7 +7,9 @@ export let Header = (props: any) => {
     <>
       <div>
         <h1>The Art Institute of Chicago</h1>
+        <br />
         <h2>Search through the museums DB !</h2>
+        <br />
         <input
           onChange={(e) => setSearch(e.target.value.trim())}
           type={"text"}
