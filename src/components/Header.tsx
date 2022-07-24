@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "../styles.css";
+import Button from "react-bootstrap/Button";
 
 export let Header = (props: any) => {
   const [search, setSearch] = useState("");
@@ -16,6 +18,8 @@ export let Header = (props: any) => {
           placeholder={"Enter Your Search Here..."}
         ></input>
         <button
+          variant="primary"
+          className="centered"
           disabled={!search}
           onClick={() => {
             props.search(search.trim());

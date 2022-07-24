@@ -37,7 +37,7 @@ export let Card = (props: any) => {
           {}
           <a href="./GoToArtist">
             <p onClick={goToArtist}>
-              Title: {props.item.title.truncate || "Artist name"}
+              Title: {props.item.title || "Artist name"}
             </p>
           </a>{" "}
           <a href="./GoToArtist">
