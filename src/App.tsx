@@ -17,8 +17,8 @@ export default function App() {
     data1 = jsonData;
   }
 
-  return (
-    <div className="center">
+  return (<div className={"center","content"}>
+    <div className="content">
       <Header  search={getData} />
   <div></div>
       <br />
@@ -30,6 +30,7 @@ export default function App() {
             ))
           : "No data to show"}
       </div>
+    </div>
     </div>
   );
 }

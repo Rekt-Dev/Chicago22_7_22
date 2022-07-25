@@ -18,10 +18,11 @@ export let Card = (props: any) => {
   };
   return (
     <>
+    <div className="">
       <div className="">
         <a href="OpenCard">
           <img
-            width="230rem"
+            width="220rem"
             height="230rem"
             alt=" 3 cats"
             src={`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`}
@@ -51,6 +52,7 @@ export let Card = (props: any) => {
             </p>
           </a>
         </ul>
+      </div>
       </div>
     </>
   );
