@@ -20,7 +20,7 @@ export default function App() {
 
   return (
     <div className="body">
-      <div className="">
+      <div className="ofearz">
         <Header search={getData} />
         <div></div>
 
@@ -37,13 +37,27 @@ export default function App() {
         <br />
         <br />
         <br />
+        <div className="">
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
 
-        <div className="center">
-          {jsonData.data
-            ? jsonData.data.map((artWork, index) => (
-                <Card key={index} item={artWork} />
-              ))
-            : "No data to show"}
+          <div className="center">
+            {jsonData.data
+              ? jsonData.data.map((artWork, index) => (
+                  <Card key={index} item={artWork} />
+                ))
+              : "No data to show"}
+          </div>
         </div>
       </div>
     </div>

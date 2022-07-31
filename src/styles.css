@@ -60,7 +60,7 @@ h3 {
 
 .flap::after {
   position: absolute;
-  content: "";
+  content: normal;
   height: 100%;
   width: 50%;
   right: 0;
@@ -77,4 +77,13 @@ h3 {
 
 .container:hover .flap::before {
   transform: translatex(-300px);
+}
+
+.ofearz {
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
