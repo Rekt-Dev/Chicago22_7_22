@@ -2,6 +2,9 @@
 
 body {
   background: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .container {
@@ -16,7 +19,7 @@ body {
   border-radius: 20px;
   cursor: pointer;
   box-shadow: 0 0 20px 8px #d0d0d0;
-  padding: 10px;
+  padding: 30px;
 }
 
 .content {
@@ -25,7 +28,7 @@ body {
   transform: translatey(-50%);
   text-align: justify;
   color: black;
-  padding: 40px;
+  padding: 60px;
   font-family: "Merriweather", serif;
 }
 

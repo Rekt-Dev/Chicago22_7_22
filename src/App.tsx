@@ -19,10 +19,23 @@ export default function App() {
   }
 
   return (
-    <div className={("center", "content")}>
-      <div className="content">
+    <div className="body">
+      <div className="">
         <Header search={getData} />
         <div></div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
 
         <div className="center">
