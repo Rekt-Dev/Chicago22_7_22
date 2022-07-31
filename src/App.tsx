@@ -17,20 +17,21 @@ export default function App() {
     data1 = jsonData;
   }
 
-  return (<div className={"center","content"}>
-    <div className="content">
-      <Header  search={getData} />
-  <div></div>
-      <br />
+  return (
+    <div className={("center", "content")}>
+      <div className="content">
+        <Header search={getData} />
+        <div></div>
+        <br />
 
-      <div className="center">
-        {jsonData.data
-          ? jsonData.data.map((artWork, index) => (
-              <Card key={index} item={artWork} />
-            ))
-          : "No data to show"}
+        <div className="center">
+          {jsonData.data
+            ? jsonData.data.map((artWork, index) => (
+                <Card key={index} item={artWork} />
+              ))
+            : "No data to show"}
+        </div>
       </div>
-    </div>
     </div>
   );
 }

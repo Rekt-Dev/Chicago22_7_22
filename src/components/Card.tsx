@@ -12,47 +12,46 @@ export let Card = (props: any) => {
 
   const artworkId = props.item.image_id;
   let constructedLink = imageStartLink + artworkId + imageEndLink;
-  console.log(`this is constructedLink  ${constructedLink}`);
   let goToArtist = () => {
     console.log("go2artist invoked");
   };
   return (
     <>
-    <div className="">
-      <div className="">
-        <a href="OpenCard">
-          <img
-            width="220rem"
-            height="230rem"
-            alt=" 3 cats"
-            src={`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`}
-            onMouseOut={() => console.log("out of hover")}
-            onMouseOver={() => console.log("into hover")}
-          />
-          <div
-            className="mask"
-            style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
-          ></div>
-        </a>
-        <ul>
-          {}
-          <a href="./GoToArtist">
-            <p onClick={goToArtist}>
-              Title: {props.item.title || "Artist name"}
-            </p>
-          </a>{" "}
-          <a href="./GoToArtist">
-            <p onClick={goToArtist}>
-              Artist: {props.item.artist_title || "Title Name"}
-            </p>
+      <div className="container">
+        <div className="content">
+          <a href="OpenCard">
+            <img
+              width="220rem"
+              height="230rem"
+              alt=" 3 cats"
+              src={`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`}
+              onMouseOut={() => console.log("out of hover")}
+              onMouseOver={() => console.log("into hover")}
+            />
+            <div
+              className="mask"
+              style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
+            ></div>
           </a>
-          <a href="./GoToArtist">
-            <p onClick={goToArtist}>
-              Origin: {props.item.place_of_origin || "origin"}
-            </p>
-          </a>
-        </ul>
-      </div>
+          <ul>
+            {}
+            <a href="./GoToArtist">
+              <p onClick={goToArtist}>
+                Title: {props.item.title || "Artist name"}
+              </p>
+            </a>{" "}
+            <a href="./GoToArtist">
+              <p onClick={goToArtist}>
+                Artist: {props.item.artist_title || "Title Name"}
+              </p>
+            </a>
+            <a href="./GoToArtist">
+              <p onClick={goToArtist}>
+                Origin: {props.item.place_of_origin || "origin"}
+              </p>
+            </a>
+          </ul>
+        </div>
       </div>
     </>
   );
