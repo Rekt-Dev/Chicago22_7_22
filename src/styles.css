@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap");
 
 body {
   background: #f2f2f2;
 }
 
-.container  {
+.container {
   position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   height: 400px;
-  width: 600px;
+  width: 300px;
   background: #f2f2f2;
   overflow: hidden;
   border-radius: 20px;
@@ -25,7 +25,7 @@ body {
   text-align: justify;
   color: black;
   padding: 40px;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 h1 {
@@ -47,7 +47,8 @@ h3 {
   content: "";
   height: 100%;
   width: 50%;
-  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
+  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg")
+    white;
   background-position: 100px;
   background-repeat: no-repeat;
   transition: 1s;
@@ -59,7 +60,8 @@ h3 {
   height: 100%;
   width: 50%;
   right: 0;
-  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
+  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg")
+    white;
   background-position: -200px;
   background-repeat: no-repeat;
   transition: 1s;
@@ -69,6 +71,6 @@ h3 {
   transform: translatex(300px);
 }
 
-.container:hover .flap::before{
+.container:hover .flap::before {
   transform: translatex(-300px);
 }

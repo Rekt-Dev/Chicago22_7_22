@@ -2,6 +2,7 @@ import "./styles.css";
 import { Card } from "./components/Card";
 import { Header } from "./components/Header";
 import { useState } from "react";
+import { BrowserRouter as Switch, Route, Link } from "react-router-dom";
 
 export default function App() {
   const [jsonData, setJsonData] = useState([]);
