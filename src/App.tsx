@@ -51,12 +51,17 @@ export default function App() {
           <br />
           <br />
 
+
           <div className="center">
             {jsonData.data
               ? jsonData.data.map((artWork, index) => (
                   <Card key={index} item={artWork} />
                 ))
               : "No data to show"}
+                        <br />
+                        <br />
+                        <br />
+
           </div>
         </div>
       </div>
