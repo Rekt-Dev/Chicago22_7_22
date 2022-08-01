@@ -87,3 +87,10 @@ h3 {
   flex-wrap: wrap;
   flex-direction: row;
 }
+
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
