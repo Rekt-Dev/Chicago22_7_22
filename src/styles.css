@@ -12,10 +12,17 @@ body {
 .h2 {
   text-align: center;
 }
+
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  height: 250px;
+  }
 .container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
   left: 50%;
   top: 50%;
