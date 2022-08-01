@@ -4,7 +4,7 @@ body {
   background: #f2f2f2;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .container {
@@ -20,6 +20,7 @@ body {
   cursor: pointer;
   box-shadow: 0 0 20px 8px #d0d0d0;
   padding: 30px;
+  flex-direction: row | row-reverse | column | column-reverse;
 }
 
 .content {

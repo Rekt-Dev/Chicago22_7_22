@@ -53,6 +53,8 @@ export let Card = (props: any) => {
           </ul>
         </div>
       </div>
+      <br />
+      <br />
     </>
   );
 };
