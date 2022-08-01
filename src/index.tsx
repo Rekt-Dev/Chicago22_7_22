@@ -19,10 +19,10 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<OpenCard />} />
-          <Route path="teams" element={<Teams />}>
-            <Route path=":teamId" element={<Team />} />
-            <Route path="new" element={<NewTeamForm />} />
-            <Route index element={<LeagueStandings />} />
+          <Route path="OpenCard" element={<OpenCard />}>
+            {/*       <Route path=":teamId" element={< />} />
+            <Route path="new" element={< />} />
+            <Route index element={< />} /> */}
           </Route>
         </Route>
       </Routes>
