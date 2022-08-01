@@ -11,7 +11,7 @@ body {
   position: relative;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-40%, -50%);
   height: 22rem;
   width: 22rem;
   background: #f2f2f2;
