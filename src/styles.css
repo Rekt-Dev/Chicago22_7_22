@@ -111,3 +111,7 @@ h3 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.card {
+  padding: 27px;
+}
