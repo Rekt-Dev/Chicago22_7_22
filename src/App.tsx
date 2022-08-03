@@ -3,7 +3,7 @@ import { Card } from "./components/Card";
 import { Header } from "./components/Header";
 import { useState } from "react";
 import {
-  BrowserRouter as Switch,
+  BrowserRouter as 
   Route,
   Link,
   useNavigate
