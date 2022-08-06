@@ -1,14 +1,14 @@
-import { Redirect } from "./Redirect";
+//import { Redirect } from "./Redirect";
 
 export let Card = (props: any) => {
-  function dataOrDefault() {
+  /* function dataOrDefault() {
     const defaultLink =
       "https://www.artic.edu/iiif/2/d68a3f34-411d-efd4-154e-48b9c565b125/full/843,/0/default.jpg";
 
     if (props.item) {
       return props.item.image_id;
     } else return defaultLink;
-  }
+  } */
   //const imageEndLink = "/full/843,/0/default.jpg";
   //const imageStartLink = "https://www.artic.edu/iiif/2/";
 

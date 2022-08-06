@@ -3,10 +3,10 @@ import { BrowserRouter as useNavigate } from "react-router-dom";
 export const OpenCard = () => {
   //let navigate = useNavigate();
 
-  const clickCard = () => {
+  /* const clickCard = () => {
     console.log(`clickCard activ8d`);
   };
-
+ */
   return (
     <div>
       <img
