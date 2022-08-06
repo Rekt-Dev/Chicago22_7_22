@@ -1,13 +1,7 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useNavigate
-} from "react-router-dom";
+import { BrowserRouter as useNavigate } from "react-router-dom";
 
 export const OpenCard = () => {
-  let navigate = useNavigate();
+  //let navigate = useNavigate();
 
   const clickCard = () => {
     console.log(`clickCard activ8d`);

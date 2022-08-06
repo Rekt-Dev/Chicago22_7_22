@@ -9,11 +9,11 @@ export let Card = (props: any) => {
       return props.item.image_id;
     } else return defaultLink;
   }
-  const imageEndLink = "/full/843,/0/default.jpg";
-  const imageStartLink = "https://www.artic.edu/iiif/2/";
+  //const imageEndLink = "/full/843,/0/default.jpg";
+  //const imageStartLink = "https://www.artic.edu/iiif/2/";
 
-  const artworkId = props.item.image_id;
-  let constructedLink = imageStartLink + artworkId + imageEndLink;
+  //const artworkId = props.item.image_id;
+  //let constructedLink = imageStartLink + artworkId + imageEndLink;
   let goToArtist = () => {
     console.log("go2artist invoked");
   };
