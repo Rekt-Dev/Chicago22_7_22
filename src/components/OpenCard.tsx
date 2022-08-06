@@ -9,6 +9,10 @@ import {
 export const OpenCard = () => {
   let navigate = useNavigate();
 
+  const clickCard = () => {
+    console.log(`clickCard activ8d`);
+  };
+
   return (
     <div>
       <img
