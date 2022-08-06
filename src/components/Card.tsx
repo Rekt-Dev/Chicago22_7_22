@@ -1,3 +1,5 @@
+import { Redirect } from "./Redirect";
+
 export let Card = (props: any) => {
   function dataOrDefault() {
     const defaultLink =
@@ -18,7 +20,7 @@ export let Card = (props: any) => {
   return (
     <>
       <div className="container">
-        <div className={"content" ,"ofearz", "truncate", "card" }>
+        <div className={("content", "ofearz", "truncate", "card")}>
           <a href="./OpenCard">
             <img
               width="220rem"
