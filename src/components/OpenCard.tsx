@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, useNavigate} from "react-router-dom";
 
 export const OpenCard = () => {
   return (
