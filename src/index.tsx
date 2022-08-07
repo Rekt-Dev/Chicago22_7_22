@@ -10,6 +10,7 @@ import {
 import App from "./App";
 import { OpenCard } from "./components/OpenCard";
 import { GoToArtist } from "./components/GoToArtist";
+import { HoverCard } from "./components/HoverCard";
 
 const rootElement = document.getElementById("root");
 const root = ReactDOMClient.createRoot(rootElement);
