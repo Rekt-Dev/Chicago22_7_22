@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import { OpenCard } from "./components/OpenCard";
+import { GoToArtist } from "./components/GoToArtist";
 
 const rootElement = document.getElementById("root");
 const root = ReactDOMClient.createRoot(rootElement);
@@ -17,14 +18,10 @@ root.render(
   <StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<OpenCard />} />
-          <Route path="OpenCard" element={<OpenCard />}>
-            {/*       <Route path=":teamId" element={< />} />
-            <Route path="new" element={< />} />
-            <Route index element={< />} /> */}
-          </Route>
-        </Route>
+        <Route path="/" element={<App />} />
+        <Route path="gotoartist" element={<GoToArtist />} />
+        <Route path="opencard" element={<OpenCard />} />
+        <Route path="hovercard" element={<HoverCard />} />
       </Routes>
     </Router>
   </StrictMode>
