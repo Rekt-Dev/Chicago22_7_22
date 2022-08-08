@@ -2,7 +2,6 @@ import { StrictMode } from "react";
 import * as ReactDOMClient from "react-dom/client";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   Routes,
   Link
