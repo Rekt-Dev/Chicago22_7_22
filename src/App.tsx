@@ -22,7 +22,7 @@ export default function App() {
         <div></div>
 
         <div className="">
-          <div className="center">
+          <div className={("center", "card", "ofearz", "truncate")}>
             {jsonData.data
               ? jsonData.data.map((artWork, index) => (
                   <Card key={index} item={artWork} />

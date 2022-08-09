@@ -2,12 +2,10 @@
 
 body {
   position: relative;
-
-  background: #f2f2f2;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  position: relative;
+  background: #f2f2f2;
 }
 .p {
   text-align: center;
@@ -21,4 +19,14 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.ofearz {
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
 }
