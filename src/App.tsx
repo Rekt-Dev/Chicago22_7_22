@@ -28,9 +28,6 @@ export default function App() {
                   <Card key={index} item={artWork} />
                 ))
               : "No data to show"}
-            <br />
-            <br />
-            <br />
           </div>
         </div>
       </div>
