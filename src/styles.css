@@ -65,32 +65,7 @@ h3 {
   height: 100%;
 }
 
-.flap::before {
-  position: relative;
-  content: "";
-  height: 100%;
-  width: 50%;
-  background: url("https://he-il.facebook.com/pages/category/Fictional-Character/Mabel-Pines-163446130457930/")
-    white;
-  background-position: 100px;
-  background-repeat: no-repeat;
-  transition: 1s;
-}
-
-.flap::after {
-  position: relative;
-  content: normal;
-  height: 100%;
-  width: 50%;
-  right: 0;
-  background: url("https://he-il.facebook.com/pages/category/Fictional-Character/Mabel-Pines-163446130457930/")
-    white;
-  background-position: -200px;
-  background-repeat: no-repeat;
-  transition: 1s;
-}
-
-.container:hover .flap::after {
+. .container:hover .flap::after {
   transform: translatex(300px);
 }
 
