@@ -6,9 +6,9 @@ export let Header = (props: any) => {
   const [search, setSearch] = useState("");
 
   return (
-    <>
-      <div className="center">
-        <h1 className="center">The Art Institute of Chicago</h1>
+    <div className={("ofearz", "center", "")}>
+      <div className="">
+        <h1 className="">The Art Institute of Chicago</h1>
         <br />
         <h2>Search through the museums DB !</h2>
         <br />
@@ -28,7 +28,7 @@ export let Header = (props: any) => {
           Search...
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

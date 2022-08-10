@@ -43,3 +43,10 @@ body {
 .alignLeft {
   text-align: left;
 }
+
+.flexRow {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+}
