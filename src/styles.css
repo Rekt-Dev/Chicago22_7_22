@@ -37,4 +37,9 @@ body {
 .card {
   border: 5px solid rgb(32, 216, 87);
   height: 70%;
+  padding: px;
+}
+
+.alignLeft {
+  text-align: left;
 }
