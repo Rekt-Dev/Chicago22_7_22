@@ -51,6 +51,12 @@ body {
 
 .centered {
   display: flex;
-  alignitems: center;
+  align-items: center;
   justify-content: center;
+}
+
+.alignedLeft {
+  display: flex;
+  align-items: left;
+  justify-content: left;
 }

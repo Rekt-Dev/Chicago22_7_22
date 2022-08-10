@@ -18,9 +18,9 @@ export let Card = (props: any) => {
     console.log("go2artist invoked");
   };
   return (
-    <>
-      <div className={("container", "center")}>
-        <div className={("content", "ofearz", "truncate", "card")}>
+    <div className="">
+      <div className={("", "center")}>
+        <div className={("", "", "", "card")}>
           <a href="./OpenCard">
             <Image
               roundedCircle
@@ -30,7 +30,7 @@ export let Card = (props: any) => {
               onMouseOver={() => console.log("into hover")}
             />
             <div
-              className="mask"
+              className=""
               style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
             ></div>
           </a>
@@ -56,6 +56,6 @@ export let Card = (props: any) => {
       </div>
       <br />
       <br />
-    </>
+    </div>
   );
 };
