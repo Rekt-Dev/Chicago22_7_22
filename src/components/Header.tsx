@@ -8,7 +8,7 @@ export let Header = (props: any) => {
   return (
     <>
       <div className="center">
-        <h1>The Art Institute of Chicago</h1>
+        <h1 className="center">The Art Institute of Chicago</h1>
         <br />
         <h2>Search through the museums DB !</h2>
         <br />

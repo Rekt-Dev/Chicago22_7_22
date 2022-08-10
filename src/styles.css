@@ -27,9 +27,14 @@ body {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
 }
 .center {
   text-align: center;
+}
+
+.card {
+  border: 5px solid rgb(32, 216, 87);
+  height: 70%;
 }

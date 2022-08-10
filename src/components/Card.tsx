@@ -19,7 +19,7 @@ export let Card = (props: any) => {
   };
   return (
     <>
-      <div className="container">
+      <div className={("container", "center")}>
         <div className={("content", "ofearz", "truncate", "card")}>
           <a href="./OpenCard">
             <img
