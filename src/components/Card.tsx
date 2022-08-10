@@ -24,7 +24,6 @@ export let Card = (props: any) => {
           <a href="./OpenCard">
             <Image
               roundedCircle
-              thumbnail
               width="220rem"
               height="230rem"
               alt=" 3 cats"

@@ -2,13 +2,11 @@
 
 body {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+
   background: #f2f2f2;
 }
 .p {
-  text-align: center;
+  text-align: left;
 }
 .h2 {
   text-align: center;

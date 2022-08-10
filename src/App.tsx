@@ -16,7 +16,7 @@ export default function App() {
   }
 
   return (
-    <div className="center">
+    <div className="ofearz">
       <div className="ofearz">
         <Header search={getData} />
         <div></div>
