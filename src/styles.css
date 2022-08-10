@@ -30,3 +30,6 @@ body {
   flex-direction: column;
   position: relative;
 }
+.center {
+  text-align: center;
+}
