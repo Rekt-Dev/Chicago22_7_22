@@ -1,5 +1,5 @@
 //import { Redirect } from "./Redirect";
-
+import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
   /* function dataOrDefault() {
     const defaultLink =
@@ -22,7 +22,9 @@ export let Card = (props: any) => {
       <div className={("container", "center")}>
         <div className={("content", "ofearz", "truncate", "card")}>
           <a href="./OpenCard">
-            <img
+            <Image
+              roundedCircle
+              thumbnail
               width="220rem"
               height="230rem"
               alt=" 3 cats"

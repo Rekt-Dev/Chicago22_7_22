@@ -17,7 +17,7 @@ export let Header = (props: any) => {
           type={"text"}
           placeholder={"Enter Your Search Here..."}
         ></input>
-        <button
+        <Button
           variant="primary"
           className="center"
           disabled={!search}
@@ -26,7 +26,7 @@ export let Header = (props: any) => {
           }}
         >
           Search...
-        </button>
+        </Button>
       </div>
     </div>
   );
