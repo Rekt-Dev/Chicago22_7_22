@@ -20,8 +20,8 @@ body {
 }
 
 .ofearz {
-  width: 50%;
-  height: 50%;
+  width: %;
+  height: ;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -47,4 +47,10 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
   position: relative;
+}
+
+.centered {
+  display: flex;
+  alignitems: center;
+  justify-content: center;
 }

@@ -24,8 +24,6 @@ export let Card = (props: any) => {
           <a href="./OpenCard">
             <Image
               roundedCircle
-              width="220rem"
-              height="230rem"
               alt=" 3 cats"
               src={`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`}
               onMouseOut={() => console.log("out of hover")}
