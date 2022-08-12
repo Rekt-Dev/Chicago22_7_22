@@ -22,7 +22,7 @@ export default function App() {
         <div></div>
 
         <div className="felxRow">
-          <div className={("card", "", "")}>
+          <div className={("card", "alignedLeft", "")}>
             {jsonData.data
               ? jsonData.data.map((artWork, index) => (
                   <Card key={index} item={artWork} />
