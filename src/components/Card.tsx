@@ -15,7 +15,6 @@ export let Card = (props: any) => {
   //const artworkId = props.item.image_id;
   //let constructedLink = imageStartLink + artworkId + imageEndLink;
   let goToArtist = () => {
-    console.log("go2artist invoked");
   };
   return (
     <div className="">
