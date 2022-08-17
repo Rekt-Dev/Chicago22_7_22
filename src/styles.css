@@ -22,9 +22,11 @@ body {
 .ofearz {
   padding: 20px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
-  position: relative;
+  position: absolute;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .center {
   text-align: center;
@@ -67,4 +69,9 @@ body {
 .card-image {
   height: 20px;
   width: 20px;
+}
+
+.divider {
+  padding: 20px;
+  background-color: blanchedalmond;
 }
