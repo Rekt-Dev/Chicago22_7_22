@@ -20,8 +20,8 @@ export default function App() {
         <Header search={getData} />
         <div></div>
 
-        <div className="ofearz">
-          <div className={"flexrow"}>
+        <div className="">
+          <div className={("flexrow", "center", "ofearz")}>
             {jsonData.data
               ? jsonData.data.map((artWork, index) => (
                   <Card key={index} item={artWork} />
