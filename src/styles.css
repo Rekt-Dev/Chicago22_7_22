@@ -63,3 +63,8 @@ body {
   align-items: left;
   justify-content: left;
 }
+
+.card-image {
+  height: 20px;
+  width: 20px;
+}

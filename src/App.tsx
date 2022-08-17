@@ -20,8 +20,8 @@ export default function App() {
         <Header search={getData} />
         <div></div>
 
-        <div className="felxRow">
-          <div className={("card", "alignedLeft", "")}>
+        <div className="ofearz">
+          <div className={("card", "card-image", "alignedLeft", "")}>
             {jsonData.data
               ? jsonData.data.map((artWork, index) => (
                   <Card key={index} item={artWork} />
