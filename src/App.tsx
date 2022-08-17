@@ -15,8 +15,8 @@ export default function App() {
   }
 
   return (
-    <div className="ofearz">
-      <div className="ofearz">
+    <div className="flexrow">
+      <div className="">
         <Header search={getData} />
         <div></div>
 

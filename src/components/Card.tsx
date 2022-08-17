@@ -37,7 +37,7 @@ export let Card = (props: any) => {
           <ul>
             {}
             <a href="./GoToArtist">
-              <p className={("truncate", "alignLeft")} onClick={goToArtist}>
+              <p className={("truncate", "")} onClick={goToArtist}>
                 Title: {props.item.title || "Artist name"}
               </p>
             </a>{" "}
