@@ -35,7 +35,10 @@ body {
 .card {
   border: 5px solid rgb(32, 216, 87);
   height: 70%;
-  padding: px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .alignLeft {
