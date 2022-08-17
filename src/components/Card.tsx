@@ -24,6 +24,11 @@ export let Card = (props: any) => {
         <div className={("", "", "", "card")}>
           <a href="./OpenCard">
             <Image
+              onError={({ currentTarget }) => {
+                currentTarget.onerror = null; // prevents looping
+                currentTarget.src =
+                  "http://books.google.com/books/content?id=FDJBgvXyZrsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api";
+              }}
               roundedCircle
               alt=" 3 cats"
               height="300"
