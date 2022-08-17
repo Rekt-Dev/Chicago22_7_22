@@ -21,11 +21,14 @@ body {
 
 .ofearz {
   padding: 20px;
+
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
   position: absolute;
-  justify-content: space-between;
   align-items: center;
 }
 .center {

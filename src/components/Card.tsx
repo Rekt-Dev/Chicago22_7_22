@@ -17,7 +17,7 @@ export let Card = (props: any) => {
   let goToArtist = () => {};
   return (
     <div className="">
-      <div className={("", "")}>
+      <div className={("ofearz", "")}>
         <div className={("", "", "", "card")}>
           <a href="./OpenCard">
             <Image
