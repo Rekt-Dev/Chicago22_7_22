@@ -14,16 +14,18 @@ export let Card = (props: any) => {
 
   //const artworkId = props.item.image_id;
   //let constructedLink = imageStartLink + artworkId + imageEndLink;
-  let goToArtist = () => {
-  };
+  let goToArtist = () => {};
   return (
     <div className="">
-      <div className={("", "center")}>
+      <div className={("", "")}>
         <div className={("", "", "", "card")}>
           <a href="./OpenCard">
             <Image
+            
               roundedCircle
               alt=" 3 cats"
+              height ="300"
+              
               src={`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`}
               onMouseOut={() => console.log("out of hover")}
               onMouseOver={() => console.log("into hover")}
