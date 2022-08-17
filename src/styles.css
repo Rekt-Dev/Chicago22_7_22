@@ -20,11 +20,9 @@ body {
 }
 
 .ofearz {
-  width: %;
-  height: ;
   padding: 20px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
   position: relative;
 }

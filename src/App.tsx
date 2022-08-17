@@ -15,13 +15,13 @@ export default function App() {
   }
 
   return (
-    <div className="flexrow">
+    <div className="">
       <div className="">
         <Header search={getData} />
         <div></div>
 
         <div className="ofearz">
-          <div className={("card", "card-image", "alignedLeft", "")}>
+          <div className={"flexrow"}>
             {jsonData.data
               ? jsonData.data.map((artWork, index) => (
                   <Card key={index} item={artWork} />
