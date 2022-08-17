@@ -6,18 +6,20 @@ export let Header = (props: any) => {
   const [search, setSearch] = useState("");
 
   return (
-    <div className={("", "")}>
-      <div className="center">
-        <h1 className="">The Art Institute of Chicago</h1>
+    <div className={("ofearz", "center")}>
+      <div className="">
+        <h1 className="center">The Art Institute of Chicago</h1>
         <br />
         <h2>Search through the museums DB !</h2>
         <br />
         <input
-          className="alignLeft"
+          className="center"
           onChange={(e) => setSearch(e.target.value.trim())}
           type={"text"}
           placeholder={"Enter Your Search Here..."}
         ></input>
+        <br />
+
         <Button
           variant="primary"
           className="center"

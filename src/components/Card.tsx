@@ -1,6 +1,9 @@
 //import { Redirect } from "./Redirect";
 import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
+  function truncate(str) {
+    return str.length > 10 ? str.substring(0, 7) + "..." : str;
+  }
   function dataOrDefault() {
     const defaultLink =
       "https://www.artic.edu/iiif/2/d68a3f34-411d-efd4-154e-48b9c565b125/full/843,/0/default.jpg";
@@ -38,12 +41,12 @@ export let Card = (props: any) => {
             {}
             <a href="./GoToArtist">
               <p className={("truncate", "")} onClick={goToArtist}>
-                Title: {props.item.title || "Artist name"}
+                Title: {truncate(props.item.title) || "Artist name"}
               </p>
             </a>{" "}
             <a href="./GoToArtist">
               <p className={("truncate", "alignLeft")} onClick={goToArtist}>
-                Artist: {props.item.artist_title || "Title Name"}
+                Artist: {truncate(props.item.artist_title) || "Title Name"}
               </p>
             </a>
             <a href="./GoToArtist">
