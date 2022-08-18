@@ -56,7 +56,7 @@ export let Card = (props: any) => {
             </a>
             <a href="./GoToArtist">
               <p className={("truncate", "alignLeft")} onClick={goToArtist}>
-                Origin: {props.item.place_of_origin || "origin"}
+                Origin: {truncate(props.item.place_of_origin) || "origin"}
               </p>
             </a>
           </ul>
