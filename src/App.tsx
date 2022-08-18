@@ -21,7 +21,7 @@ export default function App() {
         <div></div>
 
         <div className="">
-          <div className={("flexrow", "center", "ofearz")}>
+          <div className={"flexrow center ofearz"}>
             {jsonData.data
               ? jsonData.data.map((artWork, index) => (
                   <Card key={index} item={artWork} />

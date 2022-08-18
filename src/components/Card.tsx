@@ -55,7 +55,11 @@ export let Card = (props: any) => {
               </p>
             </a>
             <a href="./GoToArtist">
-              <p className={("truncate", "alignLeft")} onClick={goToArtist}>
+              <p
+                title={props.item.place_of_origin}
+                className={("truncate", "alignLeft")}
+                onClick={goToArtist}
+              >
                 Origin: {truncate(props.item.place_of_origin) || "origin"}
               </p>
             </a>
