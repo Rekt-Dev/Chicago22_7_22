@@ -2,7 +2,10 @@
 import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
   function truncate(str) {
-    return str.length > 10 ? str.substring(0, 7) + "..." : str;
+    if (str) {
+      return str.length > 10 ? str.substring(0, 7) + "..." : str;
+    } else {
+    }
   }
   function dataOrDefault() {
     const defaultLink =
