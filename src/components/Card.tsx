@@ -1,6 +1,6 @@
 //import { Redirect } from "./Redirect";
 import Image from "react-bootstrap/Image";
-
+import { OpenCard } from "./OpenCard";
 export let Card = (props: any) => {
   function truncate(str) {
     if (str) {
@@ -23,7 +23,7 @@ export let Card = (props: any) => {
   //let constructedLink = imageStartLink + artworkId + imageEndLink;
   let goToArtist = () => {};
   return (
-    <div className="">
+    <div onClick={OpenCard} className="">
       <div className={("", "")}>
         <div className={("", "", "", "card")}>
           <a href="./OpenCard">
