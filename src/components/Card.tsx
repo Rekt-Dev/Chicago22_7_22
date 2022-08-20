@@ -1,17 +1,6 @@
 //import { Redirect } from "./Redirect";
 import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
-  const OpenCard = (props: any) => {
-    return (
-      <div>
-        <img
-          alt="beauty"
-          src={`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`}
-        />
-      </div>
-    );
-  };
-
   function truncate(str) {
     if (str) {
       return str.length > 10 ? str.substring(0, 7) + "..." : str;
@@ -31,7 +20,18 @@ export let Card = (props: any) => {
 
   //const artworkId = props.item.image_id;
   //let constructedLink = imageStartLink + artworkId + imageEndLink;
-  let goToArtist = () => {};
+  let goToArtist = () => {
+    const OpenCard = (props: any) => {
+      return (
+        <div>
+          <img
+            alt="beauty"
+            src={`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`}
+          />
+        </div>
+      );
+    };
+  };
   return (
     <div onClick={OpenCard} className="">
       <div className={("", "")}>
