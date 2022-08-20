@@ -2,13 +2,6 @@
 import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
   const OpenCard = (props: any) => {
-    //let navigate = useNavigate();
-
-    /* const clickCard = () => {
-      console.log(`clickCard activ8d`);
-    };
-   */
-
     return (
       <div>
         <img
