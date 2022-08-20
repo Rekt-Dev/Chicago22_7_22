@@ -1,5 +1,6 @@
 //import { Redirect } from "./Redirect";
 import Image from "react-bootstrap/Image";
+
 export let Card = (props: any) => {
   function truncate(str) {
     if (str) {
