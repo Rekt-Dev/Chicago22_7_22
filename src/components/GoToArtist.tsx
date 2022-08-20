@@ -1,9 +1,7 @@
-import { dataOrDefault } from "./Card";
 
 export function GoToArtist() {
   console.log(`Go2artist activ8d`);
 
-  dataOrDefault();
 
   return (
     <div>

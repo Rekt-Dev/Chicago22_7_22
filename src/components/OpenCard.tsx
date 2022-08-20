@@ -7,6 +7,8 @@ export const OpenCard = (props) => {
     console.log(`clickCard activ8d`);
   };
  */
+  dataOrDefault();
+
   return (
     <div>
       <img
