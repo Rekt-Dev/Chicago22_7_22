@@ -49,22 +49,18 @@ export let Card = (props: any) => {
           <p
             title={props.item.title}
             className={"truncate alignLeft"}
-            onClick={goToArtist}
+            onClick={() => navigate(`opencard`)}
           >
             Title: {truncate(props.item.title) || "Artist name"}
           </p>
 
-          <p
-            title={props.item.artist_title}
-            className={"truncate alignLeft"}
-            onClick={goToArtist}
-          >
+          <p title={props.item.artist_title} className={"truncate alignLeft"}>
             Artist: {truncate(props.item.artist_title) || "Title Name"}
           </p>
           <p
             title={props.item.place_of_origin}
             className={"truncate alignLeft"}
-            onClick={goToArtist}
+            onClick={() => navigate(`goToArtist`)}
           >
             Origin: {truncate(props.item.place_of_origin) || "origin"}
           </p>
