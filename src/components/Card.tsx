@@ -1,16 +1,7 @@
 //import { Redirect } from "./Redirect";
 import Image from "react-bootstrap/Image";
+import { OpenCard } from "./OpenCard";
 export let Card = (props: any) => {
-  const OpenCard = (props: any) => {
-    return (
-      <div>
-        <img
-          alt="beauty"
-          src={`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`}
-        />
-      </div>
-    );
-  };
   function truncate(str) {
     if (str) {
       return str.length > 10 ? str.substring(0, 7) + "..." : str;

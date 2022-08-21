@@ -1,5 +1,9 @@
 import { Navigate } from "react-router-dom";
-
-export function OpenCard() {
-  return <div>OpenCard page</div>;
-}
+export const OpenCard = (props: any) => {
+  return (
+    <div>
+      <div>OpenCard page</div>;
+      <img alt="beauty" src={`bruv`} />
+    </div>
+  );
+};
