@@ -2,6 +2,7 @@ import "./styles.css";
 import { Card } from "./components/Card";
 import { Header } from "./components/Header";
 import { useState } from "react";
+import { OpenCard } from "./components/OpenCard";
 
 export default function App() {
   const [jsonData, setJsonData] = useState([]);
@@ -18,7 +19,9 @@ export default function App() {
     <div className="divider">
       <div className="divider">
         <Header search={getData} />
-        <div></div>
+        <div>
+          <OpenCard />
+        </div>
 
         <div className="">
           <div className={"flexrow center ofearz"}>

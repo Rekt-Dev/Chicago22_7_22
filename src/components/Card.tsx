@@ -1,6 +1,6 @@
 //import { Redirect } from "./Redirect";
+import { useNavigate, Link } from "react-router-dom";
 import Image from "react-bootstrap/Image";
-import { OpenCard } from "./OpenCard";
 export let Card = (props: any) => {
   function truncate(str) {
     if (str) {
@@ -8,6 +8,8 @@ export let Card = (props: any) => {
     } else {
     }
   }
+  const link = Link;
+
   function dataOrDefault() {
     const defaultLink =
       "https://www.artic.edu/iiif/2/d68a3f34-411d-efd4-154e-48b9c565b125/full/843,/0/default.jpg";
@@ -22,10 +24,12 @@ export let Card = (props: any) => {
   //const artworkId = props.item.image_id;
   //let constructedLink = imageStartLink + artworkId + imageEndLink;
   let goToArtist = () => {};
+  const navigate = useNavigate();
   return (
-    <div onClick={OpenCard} className="">
-      <div className={("", "")}>
-        <div className={("", "", "", "card")}>
+    <div>
+      <div>
+        <div className={"card"}>
+          <link to="opencard">opencard</link>
           <Image
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping
