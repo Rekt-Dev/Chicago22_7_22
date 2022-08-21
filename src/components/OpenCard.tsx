@@ -1,1 +1,3 @@
-//import { BrowserRouter as useNavigate } from "react-router-dom";
+export function OpenCard() {
+  return <div>OpenCard page</div>;
+}
