@@ -1,6 +1,6 @@
 //import { Redirect } from "./Redirect";
 import { useNavigate, Link } from "react-router-dom";
-import Image from "react-bootstrap/Image";
+//import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
   function truncate(str) {
     if (str) {
@@ -31,8 +31,7 @@ export let Card = (props: any) => {
     <div>
       <div>
         <div onClick={() => navigate(`opencard`)} className={"card"}>
-          <Image
-            onClick={navigate(`opencard`)}
+          <img
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping
               currentTarget.src =
