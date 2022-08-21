@@ -29,7 +29,7 @@ export let Card = (props: any) => {
   const navigate = useNavigate();
   return (
     <div>
-      <div>
+      <div onClick={navigate(`opencard`)}>
         <div className={"card"}>
           <Image
             onError={({ currentTarget }) => {
