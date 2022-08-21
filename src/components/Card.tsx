@@ -30,14 +30,13 @@ export let Card = (props: any) => {
   return (
     <div>
       <div>
-        <div onClick={() => navigate(`opencard`)} className={"card"}>
+        <div onClick={() => navigate(`opencard`, {})} className={"card"}>
           <img
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping
               currentTarget.src =
                 "http://books.google.com/books/content?id=FDJBgvXyZrsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api";
             }}
-            roundedCircle
             alt=" 3 cats"
             height="300"
             width="300"
