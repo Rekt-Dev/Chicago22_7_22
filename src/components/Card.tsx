@@ -5,7 +5,6 @@ export let Card = (props: any) => {
   function truncate(str) {
     if (str) {
       return str.length > 10 ? str.substring(0, 7) + "..." : str;
-    } else {
     }
   }
   const link = Link;
@@ -23,13 +22,15 @@ export let Card = (props: any) => {
 
   //const artworkId = props.item.image_id;
   //let constructedLink = imageStartLink + artworkId + imageEndLink;
-  let goToArtist = () => {};
+  let goToArtist = () => {
+    console.log(`go2artist invoked`);
+  };
+
   const navigate = useNavigate();
   return (
     <div>
       <div>
         <div className={"card"}>
-          <link to="opencard">opencard</link>
           <Image
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping
@@ -48,22 +49,20 @@ export let Card = (props: any) => {
             className=""
             style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
           ></div>
-          <ul>
-            <p className={"truncate alignLeft"} onClick={goToArtist}>
-              Title: {truncate(props.item.title) || "Artist name"}
-            </p>
+          <p className={"truncate alignLeft"} onClick={goToArtist}>
+            Title: {truncate(props.item.title) || "Artist name"}
+          </p>
 
-            <p className={"truncate alignLeft"} onClick={goToArtist}>
-              Artist: {truncate(props.item.artist_title) || "Title Name"}
-            </p>
-            <p
-              title={props.item.place_of_origin}
-              className={"truncate alignLeft"}
-              onClick={goToArtist}
-            >
-              Origin: {truncate(props.item.place_of_origin) || "origin"}
-            </p>
-          </ul>
+          <p className={"truncate alignLeft"} onClick={goToArtist}>
+            Artist: {truncate(props.item.artist_title) || "Title Name"}
+          </p>
+          <p
+            title={props.item.place_of_origin}
+            className={"truncate alignLeft"}
+            onClick={goToArtist}
+          >
+            Origin: {truncate(props.item.place_of_origin) || "origin"}
+          </p>
         </div>
       </div>
       <br />
