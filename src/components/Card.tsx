@@ -49,11 +49,19 @@ export let Card = (props: any) => {
             className=""
             style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
           ></div>
-          <p className={"truncate alignLeft"} onClick={goToArtist}>
+          <p
+            title={props.item.title}
+            className={"truncate alignLeft"}
+            onClick={goToArtist}
+          >
             Title: {truncate(props.item.title) || "Artist name"}
           </p>
 
-          <p className={"truncate alignLeft"} onClick={goToArtist}>
+          <p
+            title={props.item.artist_title}
+            className={"truncate alignLeft"}
+            onClick={goToArtist}
+          >
             Artist: {truncate(props.item.artist_title) || "Title Name"}
           </p>
           <p
