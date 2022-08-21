@@ -19,7 +19,6 @@ export default function App() {
     <div className="divider">
       <div className="divider">
         <Header search={getData} />
-        <div></div>
 
         <div className="">
           <div className={"flexrow center ofearz"}>
