@@ -45,10 +45,7 @@ export let Card = (props: any) => {
             onMouseOut={() => console.log("out of hover")}
             onMouseOver={() => console.log("into hover")}
           />
-          <div
-            className=""
-            style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
-          ></div>
+          <div style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}></div>
           <p
             title={props.item.title}
             className={"truncate alignLeft"}
