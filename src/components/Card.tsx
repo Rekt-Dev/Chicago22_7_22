@@ -4,7 +4,7 @@ import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
   function truncate(str) {
     if (str) {
-      return str.length > 10 ? str.substring(0, 7) + "..." : str;
+      return str.length > 17 ? str.substring(0, 13) + "..." : str;
     }
   }
   const link = Link;
@@ -29,9 +29,10 @@ export let Card = (props: any) => {
   const navigate = useNavigate();
   return (
     <div>
-      <div onClick={navigate(`opencard`)}>
-        <div className={"card"}>
+      <div>
+        <div onClick={() => navigate(`opencard`)} className={"card"}>
           <Image
+            onClick={navigate(`opencard`)}
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping
               currentTarget.src =
