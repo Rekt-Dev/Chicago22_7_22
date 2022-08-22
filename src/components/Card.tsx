@@ -29,8 +29,8 @@ export let Card = (props: any) => {
   const navigate = useNavigate();
   return (
     <div>
-      <div>
-        <div onClick={() => navigate(`opencard`, {})} className={"card"}>
+      <div className="loader-containe">
+        <div className="loader-containe" onClick={() => navigate(`opencard`, {})} className={"card"}>
           <img
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping

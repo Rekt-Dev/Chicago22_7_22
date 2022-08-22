@@ -17,16 +17,18 @@ export default function App() {
 
   return (
     <div className="divider">
-      <div className="divider">
-        <Header search={getData} />
+      <div className="loader-containe">
+        <div className="divider">
+          <Header search={getData} />
 
-        <div className="">
-          <div className={"flexrow center ofearz"}>
-            {jsonData.data
-              ? jsonData.data.map((artWork, index) => (
-                  <Card key={index} item={artWork} />
-                ))
-              : "No data to show"}
+          <div className="">
+            <div className={"loader-containe flexrow center ofearz"}>
+              {jsonData.data
+                ? jsonData.data.map((artWork, index) => (
+                    <Card key={index} item={artWork} />
+                  ))
+                : "No data to show"}
+            </div>
           </div>
         </div>
       </div>
