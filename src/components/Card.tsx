@@ -7,7 +7,6 @@ export let Card = (props: any) => {
       return str.length > 17 ? str.substring(0, 13) + "..." : str;
     }
   }
-  const link = Link;
 
   function dataOrDefault() {
     const defaultLink =
@@ -29,8 +28,8 @@ export let Card = (props: any) => {
   const navigate = useNavigate();
   return (
     <div>
-      <div >
-        <div className="card" onClick={() => navigate(`opencard`, {})} >
+      <div>
+        <div className="card" onClick={() => navigate(`opencard`, {})}>
           <img
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping
