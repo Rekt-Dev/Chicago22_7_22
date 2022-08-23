@@ -2,7 +2,6 @@ import "./styles.css";
 import { Card } from "./components/Card";
 import { Header } from "./components/Header";
 import { useState } from "react";
-import { OpenCard } from "./components/OpenCard";
 
 export default function App() {
   const [jsonData, setJsonData] = useState([]);

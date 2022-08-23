@@ -29,7 +29,10 @@ export let Card = (props: any) => {
   return (
     <div>
       <div>
-        <div className="card" onClick={() => navigate(`opencard`, {})}>
+        <div
+          className="card"
+          onClick={() => navigate(`opencard`, { state: artWork })}
+        >
           <img
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping
