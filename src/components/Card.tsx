@@ -24,14 +24,20 @@ export let Card = (props: any) => {
   let goToArtist = () => {
     console.log(`go2artist invoked`);
   };
-
+  let imageId = props.item.image_id;
   const navigate = useNavigate();
   return (
     <div>
       <div>
         <div
           className="card"
-          onClick={() => navigate(`opencard`, { state: artWork })}
+          onClick={() =>
+            navigate(`opencard`, {
+              state: {
+                imageId: imageId
+              }
+            })
+          }
         >
           <img
             onError={({ currentTarget }) => {
