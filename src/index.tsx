@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.mtin.css";
 
 import { StrictMode } from "react";
 import * as ReactDOMClient from "react-dom/client";

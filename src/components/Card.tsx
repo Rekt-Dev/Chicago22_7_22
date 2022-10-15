@@ -1,13 +1,14 @@
 //import { Redirect } from "./Redirect";
 import { useNavigate, Link } from "react-router-dom";
-import Image from "react-bootstrap/Image";
+//import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
+  let imageId = props.item.image_id;
+
   function truncate(str) {
     if (str) {
       return str.length > 17 ? str.substring(0, 13) + "..." : str;
     }
   }
-  const link = Link;
 
   function dataOrDefault() {
     const defaultLink =
@@ -25,24 +26,21 @@ export let Card = (props: any) => {
   let goToArtist = () => {
     console.log(`go2artist invoked`);
   };
-
   const navigate = useNavigate();
   return (
     <div>
       <div>
-        <div onClick={() => navigate(`opencard`)} className={"card"}>
-          <Image
-            onClick={navigate(`opencard`)}
+        <div className="card" onClick={() => navigate(`opencard`)}>
+          <img
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping
               currentTarget.src =
                 "http://books.google.com/books/content?id=FDJBgvXyZrsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api";
             }}
-            roundedCircle
             alt=" 3 cats"
             height="300"
             width="300"
-            src={`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`}
+            src={`https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`}
             onMouseOut={() => console.log("out of hover")}
             onMouseOver={() => console.log("into hover")}
           />
@@ -50,22 +48,18 @@ export let Card = (props: any) => {
           <p
             title={props.item.title}
             className={"truncate alignLeft"}
-            onClick={goToArtist}
+            onClick={() => navigate(`opencard`)}
           >
             Title: {truncate(props.item.title) || "Artist name"}
           </p>
 
-          <p
-            title={props.item.artist_title}
-            className={"truncate alignLeft"}
-            onClick={goToArtist}
-          >
+          <p title={props.item.artist_title} className={"truncate alignLeft"}>
             Artist: {truncate(props.item.artist_title) || "Title Name"}
           </p>
           <p
             title={props.item.place_of_origin}
             className={"truncate alignLeft"}
-            onClick={goToArtist}
+            onClick={() => navigate(`goToArtist`)}
           >
             Origin: {truncate(props.item.place_of_origin) || "origin"}
           </p>

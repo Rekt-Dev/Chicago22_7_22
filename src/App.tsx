@@ -2,31 +2,37 @@ import "./styles.css";
 import { Card } from "./components/Card";
 import { Header } from "./components/Header";
 import { useState } from "react";
-import { OpenCard } from "./components/OpenCard";
 
 export default function App() {
   const [jsonData, setJsonData] = useState([]);
+  const [imageSrc, setImageSrc] = useState("");
 
   async function getData(searchData: any) {
     const response = await fetch(
       `https://api.artic.edu/api/v1/artworks/search?q=${searchData}&limit=10&fields=id,title,image_id,artist_names,artist_title,place_of_origin`
     );
     setJsonData(await response.json());
-    console.log(jsonData);
+    console.log(`this is response ${response}`);
+    setImageSrc(jsonData.data.artwork);
+    console.log(`this is jsonData ${jsonData}`);
+    console.log(`this is `);
   }
 
   return (
     <div className="divider">
-      <div className="divider">
-        <Header search={getData} />
+      <div>{jsonData}</div>
+      <div className="loader-containe">
+        <div className="divider">
+          <Header search={getData} />
 
-        <div className="">
-          <div className={"flexrow center ofearz"}>
-            {jsonData.data
-              ? jsonData.data.map((artWork, index) => (
-                  <Card key={index} item={artWork} />
-                ))
-              : "No data to show"}
+          <div className="">
+            <div className={"loader-containe flexrow center ofearz"}>
+              {jsonData.data
+                ? jsonData.data.map((artWork, index) => (
+                    <Card key={index} item={artWork} />
+                  ))
+                : "No data to show"}
+            </div>
           </div>
         </div>
       </div>
