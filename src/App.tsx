@@ -12,6 +12,8 @@ export default function App() {
       `https://api.artic.edu/api/v1/artworks/search?q=${searchData}&limit=10&fields=id,title,image_id,artist_names,artist_title,place_of_origin`
     );
     setJsonData(await response.json());
+    console.log(`this is response ${response}`);
+    setImageSrc(jsonData.data.artwork);
     console.log(`this is jsonData ${jsonData}`);
     console.log(`this is `);
   }

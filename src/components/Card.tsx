@@ -2,6 +2,8 @@
 import { useNavigate, Link } from "react-router-dom";
 //import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
+  let imageId = props.item.image_id;
+
   function truncate(str) {
     if (str) {
       return str.length > 17 ? str.substring(0, 13) + "..." : str;
@@ -24,21 +26,11 @@ export let Card = (props: any) => {
   let goToArtist = () => {
     console.log(`go2artist invoked`);
   };
-  let imageId = props.item.image_id;
   const navigate = useNavigate();
   return (
     <div>
       <div>
-        <div
-          className="card"
-          onClick={() =>
-            navigate(`opencard`, {
-              state: {
-                imageId: imageId
-              }
-            })
-          }
-        >
+        <div className="card" onClick={() => navigate(`opencard`)}>
           <img
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping
@@ -48,7 +40,7 @@ export let Card = (props: any) => {
             alt=" 3 cats"
             height="300"
             width="300"
-            src={`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`}
+            src={`https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`}
             onMouseOut={() => console.log("out of hover")}
             onMouseOver={() => console.log("into hover")}
           />
