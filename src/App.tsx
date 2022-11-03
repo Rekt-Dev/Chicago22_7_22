@@ -25,7 +25,7 @@ export default function App() {
         <div className="divider">
           <Header search={getData} />
 
-          <div className="">
+          <div>
             <div className={"loader-containe flexrow center ofearz"}>
               {jsonData.data
                 ? jsonData.data.map((artWork, index) => (
